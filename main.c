@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "./src/test.h"
 
+// clear screen
 void clrscr()
 {
     system("@cls||clear");
