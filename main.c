@@ -12,12 +12,11 @@ void print_menu() {
   printf("0 - exit        \n");
   printf("1 - do_demo     \n");
   printf("2 - src/test()  \n");
-  printf("9 - menu        \n");
-  printf("----------------\n");
 }
 
 int read_option() {
   int option;
+  printf("----------------\n");
   printf("run :> ");
   scanf("%d", &option);  
   printf("----------------\n");
@@ -45,20 +44,23 @@ int main(void) {
   int option = 1; 
   int count = 0;
   print_menu();
-  while (option > 0) {
+  while (option > 0) {    
     option = read_option();    
     switch (option) {
+      case 0: break;
       case 1: do_demo(); break;
       case 2: test(); break;
       default: 
+         printf("not implemented\n");
          print_menu(); break;
     }  
     //clear screen after 5
-    if count > 5 {clrscr();
+    if (count > 5) {clrscr();
        print_menu();      
-       count = 0
-    } else { count++ }
+       count = 0;
+    } else { count++; }
   }
+  printf("Good By!\n");
   return 0;
 }
 
