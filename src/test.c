@@ -1,9 +1,8 @@
 #include <stdio.h>
+
 int test()
 {
     int test;
-    printf("Enter number: ");
-    scanf("%d", &test);  
-    printf("Number = %d",test);
+    printf("I'm src/test()\n");
     return 0;
 }
