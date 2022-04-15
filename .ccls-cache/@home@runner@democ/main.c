@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "./src/test.h"
+#include "./src/ladder.h"
+#include "./src/switch.h"
+#include "./src/function.h"
+#include "./src/swap.h"
 
 // clear screen
 void clrscr()
@@ -13,6 +17,10 @@ void print_menu() {
   printf("0 - exit        \n");
   printf("1 - do_demo     \n");
   printf("2 - src/test()  \n");
+  printf("3 - src/ladder()\n");
+  printf("4 - src/sw_test()\n");
+  printf("5 - src/fn_test()\n");
+  printf("6 - src/swap_test()\n");
 }
 
 int read_option() {
@@ -51,6 +59,10 @@ int main(void) {
       case 0: break;
       case 1: do_demo(); break;
       case 2: test(); break;
+      case 3: ladder(); break;
+      case 4: sw_test(); break;      
+      case 5: fn_test(); break;      
+      case 6: swap_test(); break;      
       default: 
          printf("not implemented\n");
          print_menu(); break;
